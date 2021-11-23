@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-11-23T01:36:54.532Z",
-    "end": "2021-11-23T01:37:08.265Z",
-    "duration": 13733,
+    "start": "2021-11-23T01:48:58.344Z",
+    "end": "2021-11-23T01:49:16.138Z",
+    "duration": 17794,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "68bc0a73-8033-45f4-9409-338d5c90a37c",
+      "uuid": "1a6f8f4e-5d69-4ac1-99d2-f8e26613bc15",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "941fb39c-56e3-4117-93de-cb92441d988b",
+          "uuid": "a2675002-79d3-4ad0-8577-7f0a3599d466",
           "title": "add todo tests",
           "fullFile": "/Users/daniele/Estudos/webdriverio-selenium-js-workspace/JavaScriptTestAutomationTutorial2021/seleniumDemo/test/firstTest.js",
           "file": "/test/firstTest.js",
@@ -38,7 +38,7 @@
               "title": "successfully adds a todo to application",
               "fullTitle": "add todo tests successfully adds a todo to application",
               "timedOut": null,
-              "duration": 2531,
+              "duration": 3409,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,7 +47,7 @@
               "context": null,
               "code": "//async function example(){ //no Mocha nao é preciso usar a funçao example() \n        //steps \n        //launch the browser\n        let driver = await new Builder().forBrowser(\"chrome\").build();\n        //navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n        //add a todo\n        //o programa ira procurar o id do campo e ira inserir o dado \n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Learn Selenium\", Key.RETURN);\n        //assert - ira buscar na lista (array) o ultimo item e ira retornar o texto presente nele \n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        // ** assert using node assertion \n        //ira checar duas strings combinam - recebe dois argumentos: 1 - o valor atual, 2 - valor esperado\n        //o valor atual estara armazenado na variavel todoText\n        //o valor esperado sera a variavel que estamos procurando \"Learn Selenium\"\n        //assert.strictEqual(todoText, \"Learn Selenium\")\n        //ira apresentar um erro, pois o valor atual:\"Learn JavaScript\" é diferente do valor esperado: \"Learn Selenium\" \n        //assert.strictEqual(todoText, \"Learn JavaScript\") // Error\n        // ** assert using chai should \n        //ira checar se o valor atual (todoText) é igual ao valor esperado (\"Learn Selenium\") \n        todoText.should.equal(\"Learn Selenium\");\n        //todoText.should.equal(\"Learn JavaScript\"); //Error\n        //close the browser \n        await driver.quit();\n        //Using locators \n        //example(); //no Mocha nao é preciso usar a funçao example()",
               "err": {},
-              "uuid": "44483ec1-2c0d-4555-a9b4-f9af7e50aeac",
+              "uuid": "877acf09-4ec5-4247-992f-518924175f06",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -55,18 +55,18 @@
           ],
           "suites": [],
           "passes": [
-            "44483ec1-2c0d-4555-a9b4-f9af7e50aeac"
+            "877acf09-4ec5-4247-992f-518924175f06"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2531,
+          "duration": 3409,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "9e11f6db-6d8f-4bb6-8ffe-ebef881d79db",
+          "uuid": "ada96daf-6279-4e68-a4f7-122d91f03f1d",
           "title": "add another todo tests",
           "fullFile": "/Users/daniele/Estudos/webdriverio-selenium-js-workspace/JavaScriptTestAutomationTutorial2021/seleniumDemo/test/secondTest.js",
           "file": "/test/secondTest.js",
@@ -82,9 +82,9 @@
               "fail": false,
               "pending": null,
               "context": null,
-              "code": "ltCapabilities.capabilities.name = this.currentTest.title; //ira pegar o nome do test\ndriver = new Builder()\n.usingServer(gridUrl)\n.withCapabilities(ltCapabilities.capabilities)\n.build();",
+              "code": "ltCapabilities.capabilities.name = this.currentTest.title; //ira inserir no titulo do test, para identifica-lo no Cloud\ndriver = new Builder()\n.usingServer(gridUrl)\n.withCapabilities(ltCapabilities.capabilities)\n.build();",
               "err": {},
-              "uuid": "22409f76-85a1-478a-9fc0-8fc3f90a4eb9",
+              "uuid": "fa7bbebc-a626-4c06-b292-95f753c96d33",
               "parentUUID": null,
               "isHook": true,
               "skipped": false
@@ -95,7 +95,7 @@
               "title": "\"after each\" hook in \"add another todo tests\"",
               "fullTitle": "add another todo tests \"after each\" hook in \"add another todo tests\"",
               "timedOut": null,
-              "duration": 481,
+              "duration": 584,
               "state": null,
               "speed": null,
               "pass": false,
@@ -104,7 +104,7 @@
               "context": null,
               "code": "//close the browser \nawait driver.quit();",
               "err": {},
-              "uuid": "febba9f8-8693-49d2-b8ba-dd68fbe3bcda",
+              "uuid": "84b7fab8-0ed2-4463-922c-f39126ccdf13",
               "parentUUID": null,
               "isHook": true,
               "skipped": false
@@ -115,7 +115,7 @@
               "title": "successfully adds a another todo to application",
               "fullTitle": "add another todo tests successfully adds a another todo to application",
               "timedOut": null,
-              "duration": 6466,
+              "duration": 8590,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -124,7 +124,7 @@
               "context": null,
               "code": "//let driver = await new Builder().forBrowser(\"chrome\").build();\n        //navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n        //add a todo\n        //o programa ira procurar o id do campo e ira inserir o dado \n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Learn Selenium\", Key.RETURN);\n        //assert - ira buscar na lista (array) o ultimo item e ira retornar o texto presente nele \n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        todoText.should.equal(\"Learn Selenium\");\n        //close the browser \n        //await driver.quit();",
               "err": {},
-              "uuid": "91d31fad-4245-48f5-a48a-5f15e7fc8f2e",
+              "uuid": "81844bf4-5ed7-4d02-b62e-bbf0f412aa8f",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -133,7 +133,7 @@
               "title": "Adding a new test for reporting",
               "fullTitle": "add another todo tests Adding a new test for reporting",
               "timedOut": null,
-              "duration": 5932,
+              "duration": 7572,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -142,7 +142,7 @@
               "context": null,
               "code": "//let driver = await new Builder().forBrowser(\"chrome\").build();\n        //navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n        //add a todo\n        //o programa ira procurar o id do campo e ira inserir o dado \n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Learn JavaScript\", Key.RETURN);\n        //assert - ira buscar na lista (array) o ultimo item e ira retornar o texto presente nele \n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        todoText.should.equal(\"Learn JavaScript\");\n        //close the browser \n        //await driver.quit();",
               "err": {},
-              "uuid": "dbf4a941-e0c1-4f51-84e3-73d6ff78911d",
+              "uuid": "5c4ad43e-477f-43cd-9b25-c57a1ae1e2cd",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -150,13 +150,13 @@
           ],
           "suites": [],
           "passes": [
-            "91d31fad-4245-48f5-a48a-5f15e7fc8f2e",
-            "dbf4a941-e0c1-4f51-84e3-73d6ff78911d"
+            "81844bf4-5ed7-4d02-b62e-bbf0f412aa8f",
+            "5c4ad43e-477f-43cd-9b25-c57a1ae1e2cd"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12398,
+          "duration": 16162,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
